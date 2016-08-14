@@ -2,7 +2,6 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<title>无标题文档</title>
 </head>
 <body>
 <p>1. [Die simulator] Write a function called roll that returns a random value from[1, 2, 3, 4, 5, 6], with equal (uniform) probability.</p>
@@ -26,17 +25,17 @@ var nummenu = document.lotto.numbercount;
 var numbercount = nummenu.options[nummenu.selectedIndex].value*1;
 var maxnumbers = document.lotto.maxnum.value*1;
 if (numbercount > maxnumbers) {
-alert("Be sure to select a max lottery number value!");
+
 }
 else {
 var ok = 1;
 r = new Array (numbercount);
 for (var i = 1; i <= numbercount; i++) {
-r[i] = Math.round(Math.random() * (maxnumbers-1))+1;
+	r[i] = Math.round(Math.random() * (maxnumbers-1))+1;
 }
 for (var i = numbercount; i >= 1; i--) {
 for (var j = numbercount; j >= 1; j--) {
-if ((i != j)  &&  (r[i] == r[j])) ok = 0; 
+	if ((i != j)  &&  (r[i] == r[j])) ok = 0; 
    }   
 }
 if (ok) {
